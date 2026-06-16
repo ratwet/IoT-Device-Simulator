@@ -11,6 +11,9 @@
   <img src="https://img.shields.io/badge/MQTT-HiveMQ-orange" />
   <img src="https://img.shields.io/badge/Device-SME001-green" />
 </p>
+<br/>
+<img src="assets/wokwi_simulation.png" width="520" alt="Wokwi simulation running — OLED showing live SME001 telemetry" />
+</div>
 
 <p>
   ESP32-based IoT edge simulator that reads environmental data,
