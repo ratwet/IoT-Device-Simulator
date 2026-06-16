@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "author": "Kaushal Kumar",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp32", "top": 100, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": 29.1, "left": 177, "attrs": {} },
+    { "type": "wokwi-ssd1306", "id": "oled1", "top": -22.1, "left": -26.9, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -53.6,
+      "left": -75.7,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -24,
+      "left": -106.15,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 24,
+      "left": -115.75,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 139.2,
+      "left": -106.15,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": 236.6, "left": -105.6, "attrs": {} },
+    { "type": "wokwi-logo", "id": "logo1", "top": 316.8, "left": 9.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "dht1:VCC", "esp32:3V3", "red", [ "v9.6", "h-48", "v104.9" ] ],
+    [ "dht1:SDA", "esp32:D15", "green", [ "v9.9", "h0.1", "v85.6" ] ],
+    [ "dht1:GND", "esp32:GND.1", "black", [ "v29.1", "h-86.4", "v75.9" ] ],
+    [ "oled1:VIN", "esp32:3V3", "red", [ "v-28.8", "h77.4", "v296.9" ] ],
+    [ "oled1:GND", "esp32:GND.1", "black", [ "v-18.7", "h57.8", "v277.8" ] ],
+    [ "oled1:DATA", "esp32:D21", "blue", [ "v-48", "h153.6", "v239.7" ] ],
+    [ "oled1:CLK", "esp32:D22", "#8f4814", [ "v-38.4", "h135", "v201.2" ] ],
+    [ "esp32:D25", "r1:1", "red", [ "h-14.6", "v-95.3", "h-96", "v-153.6", "h28.8" ] ],
+    [ "r1:2", "rgb1:R", "red", [ "v8.4", "h9.6" ] ],
+    [ "esp32:D26", "r2:1", "green", [ "h-24.2", "v-9", "h-76.8", "v-201.6", "h9.6" ] ],
+    [ "r2:2", "rgb1:G", "green", [ "v8.4", "h27.5" ] ],
+    [ "esp32:D27", "r3:1", "blue", [ "h-91.4", "v-105.2", "h9.6" ] ],
+    [ "r3:2", "rgb1:B", "blue", [ "v8.4", "h36.8" ] ],
+    [ "rgb1:COM", "esp32:GND.2", "black", [ "h0.1", "v201.2", "h28.8", "v47.4" ] ],
+    [ "btn1:1.l", "esp32:D14", "magenta", [ "h-9.6", "v-19.2", "h96", "v-10.4" ] ],
+    [ "btn1:2.l", "esp32:GND.3", "black", [] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,9 @@
+# Libraries required for this project
+# WiFi.h is part of the ESP32 core, no entry needed
+
+PubSubClient
+DHT sensor library
+Adafruit SSD1306
+Adafruit GFX Library
+Adafruit BusIO
+ArduinoJson
