@@ -35,7 +35,7 @@
 
 ## 📖 Overview
 
-SupplyMesh Edge simulates a real-world logistics and supply-chain tracking device running on an ESP32.
+This Project simulates a real-world logistics and supply-chain tracking device running on an ESP32.
 
 The system periodically:
 
