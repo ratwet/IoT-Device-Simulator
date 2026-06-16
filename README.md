@@ -94,7 +94,6 @@ This project demonstrates key concepts used in modern IoT systems including tele
                        ▼
 ┌─────────────────────────────────────┐
 │               ESP32                 │
-│          SupplyMesh Edge            │
 └───────┬─────────────┬───────────────┘
         │             │
         ▼             ▼
